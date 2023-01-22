@@ -32,7 +32,7 @@ describe('<MenuLink />', () => {
     const { container } = renderTheme(
       <MenuLink link={'http://localhost'}>Children</MenuLink>,
     );
-    expect(screen.getByRole('link', { name: 'Children' }))
+    expect(container.firstChild)
       .toMatchInlineSnapshot(`
       .c0 {
         display: block;
@@ -47,7 +47,7 @@ describe('<MenuLink />', () => {
       .c0::after {
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: 0.75rem;
         left: 50%;
         width: 0;
         height: 0.2rem;
